@@ -1,10 +1,11 @@
 require 'rails_helper'
+require_relative '../helpers/user_helper'
 
-RSpec.feature "Sign Up" do
+RSpec.feature "User" do
 
-  it "works" do
-    visit '/'
-    expect(page).to have_content "hello world"
+  it "allows user to sign up" do
+    sign_up
+    expect(page).to have_content "Welcome! You have signed up successfully."
   end
-  
+
 end
