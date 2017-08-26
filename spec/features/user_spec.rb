@@ -1,6 +1,3 @@
-require 'rails_helper'
-require_relative '../helpers/user_helper'
-
 RSpec.feature 'User' do
 
   it 'allows user to sign up' do
