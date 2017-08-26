@@ -1,5 +1,4 @@
 class AlbumsController < ApplicationController
-  belongs_to :user
 
   def index
     @albums = current_user.albums
@@ -20,7 +19,7 @@ class AlbumsController < ApplicationController
   private
 
     def album_params
-      params.require(:album).permit(:title, :description)
+      params.require(:album).permit(:title, :description).merge(user_id: current_user.id)
     end
 
 end
