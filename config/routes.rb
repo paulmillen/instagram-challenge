@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :albums
   resources :profiles
+  resources :pictures
 
 
   get 'home/index'
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
   authenticated :user do
     root to: 'profiles#show', as: :authenticated_root
   end
-  
+
   root 'home#index'
 
 

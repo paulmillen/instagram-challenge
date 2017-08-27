@@ -14,6 +14,7 @@ RSpec.feature 'User' do
   it 'displays another homepage for unauthenticated visitors' do
     sign_up
     click_button 'Logout'
+    expect(current_path).to eq('/')
     expect(page).not_to have_content "Alice's profile"
     expect(page).to have_content "hello world"
   end
