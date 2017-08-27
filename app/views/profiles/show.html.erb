@@ -1,1 +1,11 @@
 <h1> <%= @user.first_name %>'s Profile </h1>
+
+<ul>
+  <% @user.pictures.each do |picture| %>
+  <li>
+    <%= picture.title %>
+    <%= image_tag picture.image.url (:medium) %>
+    <%= picture.description %>
+  </li>
+  <% end %>
+</ul>
