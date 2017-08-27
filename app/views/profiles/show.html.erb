@@ -4,7 +4,7 @@
   <% @user.pictures.each do |picture| %>
   <li>
     <%= picture.title %>
-    <%= image_tag picture.image.url (:medium) %>
+    <%= image_tag picture.image.url(:medium) %>
     <%= picture.description %>
   </li>
   <% end %>
