@@ -2,7 +2,6 @@ class PicturesController < ApplicationController
 
   def index
     @pictures = Picture.all
-    p @pictures
   end
 
   def new
