@@ -16,7 +16,7 @@ RSpec.feature 'User' do
     click_button 'Logout'
     expect(current_path).to eq('/')
     expect(page).not_to have_content "Alice's profile"
-    expect(page).to have_content "hello world"
+    expect(page).to have_content "fstop"
   end
 
   describe 'log out button' do

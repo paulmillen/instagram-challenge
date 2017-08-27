@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Film Leader</title>
+    <title>f-stop</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,19 +9,31 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div id="nav-container" class="container">
+          <nav class="d-flex justify-content-between">
 
-    <div>
-      <% if user_signed_in? %>
-          <%= button_to('Logout', destroy_user_session_path, method: :delete) %>
-      <% else %>
-          <% unless controller_name == "sessions" %>
-            <%= button_to('Login', new_user_session_path, method: :get)  %>
-          <% end %>
-      <% end %>
-    </div>
+              <div id="nav-alerts" class="">
+                <p class="notice"><%= notice %></p>
+                <p class="alert"><%= alert %></p>
+              </div>
 
-    <%= yield %>
+              <div class="">
+                <% if user_signed_in? %>
+                    <%= button_to('Logout', destroy_user_session_path, method: :delete) %>
+                <% else %>
+                    <% unless controller_name == "sessions" || controller_name == "registrations" %>
+                      <%= button_to('Login', new_user_session_path, method: :get)  %>
+                    <% end %>
+                <% end %>
+              </div>
+
+          </nav>
+        </div>
+      </div>
+
+    <main class="container">
+      <%= yield %>
+    </main>
   </body>
 </html>
