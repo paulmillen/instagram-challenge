@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     root to: 'profiles#show', as: :authenticated_root
   end
 
-  root 'home#index'
+  devise_scope :user do
+  root to: "devise/sessions#new"
+  end
 
 end

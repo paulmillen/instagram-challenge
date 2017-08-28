@@ -5,7 +5,6 @@ def sign_up(first_name: 'Alice',
             password: '123456',
             password_confirmation: '123456')
   visit '/'
-  click_button 'Login'
   click_link 'Sign up'
   fill_in 'user[first_name]', with: first_name
   fill_in 'user[last_name]', with: last_name
