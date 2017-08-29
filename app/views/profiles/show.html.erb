@@ -8,6 +8,7 @@
         <a href="<%= picture.image.url %>" class='profile-image'>
         <figure>
           <%= image_tag picture.image.url(:square) %>
+          <figcaption><p><%= picture.description %></p></figcaption>
         </figure>
     <% end %>
   </div>
