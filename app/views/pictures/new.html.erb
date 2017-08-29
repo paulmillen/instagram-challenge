@@ -11,9 +11,9 @@
   <div class="field">
     <%= f.label :image %><br>
     <%= f.file_field :image %>
-  </div>
+  </div><br>
   <div class="actions">
-    <%= f.submit 'Upload' %>
+    <%= f.submit 'Upload', class:'btn btn-primary' %>
     <%= link_to 'Return to profile', '/', class: 'button' %>
   </div>
 <% end %>
