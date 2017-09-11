@@ -2,11 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.homepage-circle {
-  width: 400px;
-  height: 400px;
-  background-color: black;
-  border-radius: 50%;
-  display: flex;
-  justify-content: space-around;
-}
+.home-logo {
+  background: image-url('platform.png');
+  height: 25em;
+  width: 40em;
+  border: 1px solid;
+};
