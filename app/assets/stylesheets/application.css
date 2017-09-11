@@ -22,6 +22,10 @@ a:hover{
     text-decoration: none;
 }
 
+.alert {
+  color: black;
+}
+
 .btn-primary {
   color: #ffffff;
   background-color: #CC0000;
