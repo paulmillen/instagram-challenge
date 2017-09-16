@@ -31,8 +31,14 @@
 
     <div class='container'>
         <%= yield %>
-    </div>
     <p class="notice ml-5"><%= notice %></p>
     <p class="alert ml-5"><%= alert %></p>
+    </div>
+
+    <footer class="footer">
+      <%= link_to 'https://github.com/paulmillen' do %>
+        <small class='pull-right m-1 grey'>github.com/paulmillen</small>
+      <% end %>
+    </footer>
   </body>
 </html>

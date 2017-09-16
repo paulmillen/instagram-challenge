@@ -13,9 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
 .navbar {
   background-color: black;
   height: 3em;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
 }
 
 a:hover{
@@ -48,25 +59,6 @@ a:hover{
   background-image: none;
 }
 
-.btn-primary.disabled,
-.btn-primary[disabled],
-fieldset[disabled] .btn-primary,
-.btn-primary.disabled:hover,
-.btn-primary[disabled]:hover,
-fieldset[disabled] .btn-primary:hover,
-.btn-primary.disabled:focus,
-.btn-primary[disabled]:focus,
-fieldset[disabled] .btn-primary:focus,
-.btn-primary.disabled:active,
-.btn-primary[disabled]:active,
-fieldset[disabled] .btn-primary:active,
-.btn-primary.disabled.active,
-.btn-primary[disabled].active,
-fieldset[disabled] .btn-primary.active {
-  background-color: #CC0000;
-  border-color: #292929;
-}
-
 .btn-primary .badge {
   color: #CC0000;
   background-color: #ffffff;
@@ -94,26 +86,15 @@ fieldset[disabled] .btn-primary.active {
   background-image: none;
 }
 
-.btn-secondary.disabled,
-.btn-secondary[disabled],
-fieldset[disabled] .btn-secondary,
-.btn-secondary.disabled:hover,
-.btn-secondary[disabled]:hover,
-fieldset[disabled] .btn-secondary:hover,
-.btn-secondary.disabled:focus,
-.btn-secondary[disabled]:focus,
-fieldset[disabled] .btn-secondary:focus,
-.btn-secondary.disabled:active,
-.btn-secondary[disabled]:active,
-fieldset[disabled] .btn-secondary:active,
-.btn-secondary.disabled.active,
-.btn-secondary[disabled].active,
-fieldset[disabled] .btn-secondary.active {
-  background-color: #FFCC00;
-  border-color: #292929;
-}
-
 .btn-secondary .badge {
   color: #FFCC00;
   background-color: #ffffff;
+}
+
+a {
+  color: inherit;
+}
+
+.grey {
+  color: grey;
 }
