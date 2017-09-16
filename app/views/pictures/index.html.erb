@@ -2,12 +2,13 @@
   <h3> Latest Pictures </h3>
 </div>
 
-  <div class='images-container justify-content-center'>
-    <% @pictures.reverse.each do |picture| %>
-
-        <a href="<%= picture.image.url %>">
-        <figure class='profile-image'>
-          <%= image_tag picture.image.url(:square) %>
-        </figure>
+<div class='images-container justify-content-center'>
+  <% @pictures.reverse.each do |picture| %>
+    <%= link_to(picture.image.url, title: "#{picture.user.username} - #{picture.description}") do%>
+      <!-- <a href="<%= picture.image.url %>"> -->
+      <figure class='profile-image'>
+        <%= image_tag picture.image.url(:square) %>
+      </figure>
     <% end %>
-  </div>
+  <% end %>
+</div>
