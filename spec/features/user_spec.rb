@@ -8,14 +8,14 @@ RSpec.feature 'User' do
   it 'redirects to a users profile' do
     sign_up
     expect(current_path).to eq('/')
-    expect(page).to have_content "Alice's Profile"
+    expect(page).to have_content "Alice's Pictures"
   end
 
   it 'displays another homepage for unauthenticated visitors' do
     sign_up
     click_button 'Logout'
     expect(current_path).to eq('/')
-    expect(page).not_to have_content "Alice's profile"
+    expect(page).not_to have_content "Alice's Pictures"
   end
 
   describe 'log out button' do

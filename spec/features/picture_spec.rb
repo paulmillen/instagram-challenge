@@ -8,7 +8,6 @@ RSpec.feature 'Picture' do
     attach_file('picture_image', Rails.root + 'spec/files/test.png', visible: false)
     click_button 'Upload'
     expect(Picture.count).to eq 1
-    expect(page).to have_content 'Test Description'
   end
 
 end
