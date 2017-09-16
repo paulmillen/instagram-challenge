@@ -1,14 +1,13 @@
-<div class='container text-left m-5'>
-  <h2> <%= @user.first_name %>'s Profile </h2>
+<div class='container text-center mt-3 mb-3'>
+  <h2> <%= @user.first_name %>'s Pictures </h2>
 </div>
 
-  <div class='images-container'>
+  <div class='images-container justify-content-center'>
     <% @user.pictures.each do |picture| %>
 
-        <a href="<%= picture.image.url %>" class='profile-image'>
-        <figure>
+        <a href="<%= picture.image.url %>">
+        <figure class='profile-image'>
           <%= image_tag picture.image.url(:square) %>
-          <figcaption><p><%= picture.description %></p></figcaption>
         </figure>
     <% end %>
   </div>
