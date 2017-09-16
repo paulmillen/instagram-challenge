@@ -10,24 +10,24 @@
   </head>
 
   <body>
-        <nav class='navbar d-flex flex-row justify-content-around'>
+        <nav class='navbar d-flex justify-content-around'>
 
-                <% if user_signed_in? %>
-                    <div class="">
-                      <%= link_to('','/', class:'fa fa-user fa-2x text-white', title: 'profile') %>
-                    </div>
-                    <div class="">
-                      <%= link_to('', new_picture_path, class:'fa fa-camera-retro fa-2x text-white', title: 'add a picture') %>
-                    </div>
-                    <div class="">
-                      <%= button_to('Logout', destroy_user_session_path, method: :delete, class:'btn btn-primary btn-sm') %>
-                    </div>
-                <% else %>
-                    <% unless controller_name == "sessions" || controller_name == "registrations" %>
-                      <%= button_to('Login', new_user_session_path, method: :get, class:'btn btn-primary btn-sm')  %>
-                    <% end %>
+            <% if user_signed_in? %>
+                <div class="ml-4">
+                  <%= link_to('', new_picture_path, class:'fa fa-camera-retro fa-2x text-white', title: 'add a picture') %>
+                </div>
+                <div class="">
+                  <%= link_to('','/', class:'fa fa-user fa-2x text-white', title: 'profile') %>
+                </div>
+                <div class="">
+                  <%= button_to('Logout', destroy_user_session_path, method: :delete, class:'btn btn-primary btn-sm') %>
+                </div>
+            <% else %>
+                <% unless controller_name == "sessions" || controller_name == "registrations" %>
+                  <%= button_to('Login', new_user_session_path, method: :get, class:'btn btn-primary btn-sm')  %>
                 <% end %>
-          </nav>
+            <% end %>
+        </nav>
 
     <div class='container'>
         <%= yield %>
