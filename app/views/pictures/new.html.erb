@@ -8,15 +8,15 @@
     <%= form_for(@picture, multipart: true) do |f| %>
       <div class="field">
         <%= f.label :title %><br>
-        <%= f.text_field :title %>
+        <%= f.text_field :title, :required => true %>
       </div>
       <div class="field mt-2">
         <%= f.label :description %><br>
-        <%= f.text_field :description %>
+        <%= f.text_field :description, :required => true %>
       </div>
       <div class="field mt-2">
         <%= f.label :image %><br>
-        <%= f.file_field :image %>
+        <%= f.file_field :image, :required => true %>
       </div><br>
       <div class="actions">
         <%= f.submit 'Upload', class:'btn btn-primary' %><br><br>

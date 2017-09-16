@@ -8,5 +8,5 @@ class Picture < ApplicationRecord
     large: '875x615>'
   }
 
-  validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+  validates_attachment_content_type :image, :presence => true, :content_type => /^image\/(png|gif|jpeg)/
 end
