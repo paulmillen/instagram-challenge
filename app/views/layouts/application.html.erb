@@ -14,10 +14,10 @@
 
             <% if user_signed_in? %>
                 <div class="ml-4">
-                  <%= link_to('', new_picture_path, class:'fa fa-camera-retro fa-2x text-white', title: 'add a picture') %>
+                  <%= link_to('', new_picture_path, class:'fa fa-plus fa-2x text-white', title: 'add a picture') %>
                 </div>
                 <div class="">
-                  <%= link_to('','/', class:'fa fa-user fa-2x text-white', title: 'profile') %>
+                  <%= link_to('','/', class:'fa fa-camera-retro fa-2x text-white', title: 'profile') %>
                 </div>
                 <div class="">
                   <%= button_to('Logout', destroy_user_session_path, method: :delete, class:'btn btn-primary btn-sm') %>
