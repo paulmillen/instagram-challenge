@@ -1,19 +1,28 @@
-<h2>upload a picture</h2>
-<%= form_for(@picture, multipart: true) do |f| %>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+<div class="d-flex align-items-center justify-content-center">
+
+  <h1 class='display-1 align-self-center d-flex' style='height: 5em;'>
+    <span class='align-self-center w-50'>add a picture</span>
+  </h1>
+
+  <div class='d-flex flex-column mt-5'>
+    <%= form_for(@picture, multipart: true) do |f| %>
+      <div class="field">
+        <%= f.label :title %><br>
+        <%= f.text_field :title %>
+      </div>
+      <div class="field mt-2">
+        <%= f.label :description %><br>
+        <%= f.text_field :description %>
+      </div>
+      <div class="field mt-2">
+        <%= f.label :image %><br>
+        <%= f.file_field :image %>
+      </div><br>
+      <div class="actions">
+        <%= f.submit 'Upload', class:'btn btn-primary' %><br><br>
+        <%= link_to 'Return to profile', '/', class: 'button' %>
+      </div>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.file_field :image %>
-  </div><br>
-  <div class="actions">
-    <%= f.submit 'Upload', class:'btn btn-primary' %>
-    <%= link_to 'Return to profile', '/', class: 'button' %>
-  </div>
-<% end %>
+
+</div>
